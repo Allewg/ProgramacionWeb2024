@@ -1,0 +1,22 @@
+{% load static %}
+<header>
+    <div class="logo">
+        <img src="{% static 'jpg/logo-principal.png' %}" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'principal' %}">Principal</a></li>
+            <li><a href="{% url 'catalogo' %}">Catálogo</a></li>
+            <li><a href="{% url 'carrito' %}">Carrito</a></li>
+            {% if user.is_authenticated and user.username == 'javi' %}
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+            {% else %}
+                <li><a href="{% url 'iniciosesion' %}">Iniciar sesión</a></li>
+                <li><a href="{% url 'register' %}">Registrarse</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

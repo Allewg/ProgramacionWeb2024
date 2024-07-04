@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="{% static 'css/stylescarrito.css' %}">
+</head>
+<body>
+    {% include 'head.html' %}
+    
+    <div class="contenedor">
+        <section id="compra">
+            <h2>Detalle de Compra</h2>
+            <div class="producto">
+                <img src="{% static 'jpg/salsa-soya.png' %}" alt="Producto">
+                <div class="info">
+                    <p>Nombre del Producto: Salsa soya</p>
+                    <p>Cantidad: <input type="number" value="2" min="1"></p>
+                    <p>Precio x unidad: <span id="precio_unidad1">$890</span></p>
+                    <p>Total: <span id="total_producto_1">$1780</span></p>
+                </div>
+            </div>
+            <div class="botones">
+                <button id="volver">Volver</button>
+                <button id="comprar-detalle">Comprar</button>
+            </div>
+        </section>
+    
+        <section id="resumen">
+            <h2>Resumen de Compra</h2>
+            <label for="cupon">Cupón de Descuento:</label>
+            <input type="text" id="cupon">
+            <button id="aplicar">Aplicar</button>
+            <p>Subtotal: $1780</p>
+            <p>Envío: $2500</p>
+            <p>Total: $4280</p>
+            <button id="comprar-resumen">Comprar</button>
+        </section>
+    </div>
+    
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="producto-container">
+            {% for item in items %}
+                <div class="producto-item">
+                    <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
+                    <p>{{ item.nombre }}</p>
+                    <p>Precio: ${{ item.precio }}</p>
+                    <p>{{ item.descripcion }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,204 @@
+header {
+    background-color: #ABAB85;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    border-color: gray;
+    border-bottom-style: solid;
+}
+
+.logo {
+    max-width: 150px; /* Ancho máximo para el contenedor del logo */
+}
+
+.logo img {
+    width: 100%; /* La imagen del logo ocupará el 100% del ancho del contenedor */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 200;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre los elementos de navegación */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Quitamos el margen derecho del último elemento */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+        .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#compra, #resumen {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#compra {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#resumen {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    flex: 0.5; /* Ajusta el ancho según sea necesario */
+}
+
+#compra h2, #resumen h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.producto img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#resumen label {
+    margin-right: 10px;
+}
+
+#resumen input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#resumen button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#resumen button:hover {
+    background-color: #0056b3;
+}
+
+#resumen p {
+    margin: 5px 0;
+    color: #666;
+}
+
+#resumen span {
+    font-weight: bold;
+    color: #333;
+}
+
+#catalogo {
+    padding: 20px;
+}
+
+#catalogo h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center; /* Añade esta línea para centrar el texto */
+}
+
+
+.catalogo-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalogo-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.catalogo-item img {
+    width: 100%;
+}
+
+#productos {
+    text-align: center; /* Para centrar los elementos */
+}
+
+#productos h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.producto-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.producto-item img {
+    width: 150px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+}
+
+.producto-item {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid #ddd; /* Agrega un borde de 1px sólido con color gris claro */
+    padding: 10px; /* Añade un relleno alrededor del contenido */
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+}
+        /*Estilos del Footer*/
+        footer {
+            background-color: #d4dc37;
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+            margin-top: 200px; /* Se asegura de que el footer esté pegado al fondo */
+            margin-bottom: 0;
+            border-radius: 30px;
+        }
+        .texto1 {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .subtitulos {
+            color: black;
+        }
+        .contenedor-img {
+            display: inline-block;
+            margin: 0;
+        }
+        .img-redes {
+            width: 55px;
+            height: 50px;
+            margin-left: 20px;
+        }

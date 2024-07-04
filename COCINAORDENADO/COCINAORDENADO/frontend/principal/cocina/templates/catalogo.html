@@ -1,0 +1,30 @@
+<!-- templates/catalogo.html (o cualquier otra plantilla donde quieras incluir el footer) -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="{% static 'css/stylescatalogo.css' %}">
+</head>
+<body>
+    {% include 'head.html' %}
+
+<section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="producto-container">
+        {% for item in items %}
+            <div class="producto-item">
+                <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
+                <p>{{ item.nombre }} </p>
+                <p>Precio: ${{ item.precio }}</p>
+                <p>{{ item.descripcion }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Incluir el footer -->
+{% include 'footer.html' %}
+
+</body>
+</html>

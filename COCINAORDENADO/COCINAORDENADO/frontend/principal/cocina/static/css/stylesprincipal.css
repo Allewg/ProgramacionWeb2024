@@ -1,0 +1,222 @@
+/* Estilos para el header */
+header {
+    background-color: #ABAB85;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    border-color: gray;
+    border-bottom-style: solid;
+}
+
+.logo {
+    max-width: 140px; /* Ancho máximo para el contenedor del logo */
+}
+
+.logo img {
+    width: 100%; /* La imagen del logo ocupará el 100% del ancho del contenedor */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 18px; /* Espacio entre los elementos de navegación */
+}
+
+nav ul li:last-child {
+    margin-right: 10; /* Quitamos el margen derecho del último elemento */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Fin estilos header */
+
+/* Imagen de fondo y seccion '¿Que te gustaria cocinar?' */
+.background-image {
+    background-image: url('/static/jpg/comida.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px; /* Agregar espacio debajo de la imagen de fondo */
+}
+
+.centered-section {
+    text-align: center;
+    color: black; /* Cambiamos el color del texto a negro */
+    background-color: white; /* Cambiamos el fondo a blanco sólido */
+    padding: 40px; /* Aumentamos el relleno para hacer el recuadro más grande */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.centered-section h2 {
+    font-size: 40px; /* Aumentamos el tamaño del título */
+    margin-bottom: 20px; /* Aumentamos el margen inferior */
+}
+
+.centered-section p {
+    font-size: 20px; /* Aumentamos el tamaño del texto */
+    margin-bottom: 30px; /* Aumentamos el margen inferior */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Inicio estilos categorias */
+.categories {
+    text-align: center;
+    margin-top: 50px; /* Ajusta el margen según sea necesario */
+}
+
+.category {
+    display: inline-block;
+    margin: 10px;
+    text-align: center; /* Alineamos el texto en el centro */
+}
+
+.category img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos seccion "Descubre" */
+.discover {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.discover h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.discover-section {
+    display: flex;
+    justify-content: center;
+}
+
+.discover-column {
+    margin: 0 100px; /* Aumentamos el margen entre las columnas */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Alineamos los elementos en columnas */
+    align-items: center; /* Centramos los elementos horizontalmente */
+}
+
+.discover-column img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.discover-column button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.discover-column button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #d4dc37;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    margin-top: 200px; /* Se asegura de que el footer esté pegado al fondo */
+    margin-bottom: 0;
+    border-radius: 30px;
+}
+
+.texto1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.subtitulos {
+    color: black;
+}
+
+.contenedor-img {
+    display: inline-block;
+    margin: 0;
+}
+
+.img-redes {
+    width: 55px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+/* Estilos del carrusel */
+.carousel-container {
+    max-width: 850px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-top: 30px; /* Espacio adicional encima del carrusel */
+}
+
+.carousel-item {
+    height: 400px; /* Ajusta la altura según tus necesidades */
+}
+
+.carousel-item img {
+    height: 400px; /* Ajusta la altura de la imagen para que se ajuste al contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+/* Ajustes adicionales para centrar y reducir el tamaño del carrusel */
+.carousel {
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: 30px auto; /* Centrar el carrusel horizontalmente y agregar separación */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'css/stylesiniciosesion.css' %}">
+</head>
+<body>
+    {% include 'head.html' %}
+
+    <div class="content">
+        <div class="login-container">
+            <div class="welcome-text">
+                <p>Bienvenido a Gourmet Anime</p>
+            </div>
+            <h2>Registrarse</h2>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                <br>
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                <br>
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                <br>
+                <input type="submit" value="Registrarse">
+            </form>
+            <p><a href="#">¿Ya tienes cuenta? Inicia sesión</a></p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

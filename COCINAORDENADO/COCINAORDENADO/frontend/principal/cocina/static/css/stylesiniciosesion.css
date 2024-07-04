@@ -1,0 +1,138 @@
+
+header {
+    background-color: #ABAB85;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    border-color: gray;
+    border-bottom-style: solid;
+}
+
+.logo {
+    max-width: 150px; /* Ancho máximo para el contenedor del logo */
+}
+
+.logo img {
+    width: 100%; /* La imagen del logo ocupará el 100% del ancho del contenedor */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre los elementos de navegación */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Quitamos el margen derecho del último elemento */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /*Imagen de fondo*/
+    height: 100vh;
+    background-image: url('/static/jpg/comida.png');
+    background-size: cover;
+    background-position: center;
+}
+.comida {
+    width: 100px;
+    height: 100px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Ancho del contenido */
+    margin: auto; /* Centrar horizontalmente */
+    margin-top: 100px; /* Espacio superior */
+    margin-bottom: 100px;
+}
+.login-container {
+    width: 50%; 
+    max-width: 400px; /* Ancho máximo */
+    text-align: center;
+    background-color: #ABAB85; /* Color de fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px; /* borde redondo */
+}
+.image-container {
+    width: 50%; /* Ancho de la imagen */
+    text-align: center;
+}
+img {
+    max-width: 100%; /* tamaño de la imagen */
+    height: auto;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none; 
+    color: blue; /* color de enlaces */
+}
+.welcome-text {
+    text-align: center;
+    margin-top: 50px; /* Añadido margen superior para el texto de bienvenida */
+    font-size: 24px; /* Aumentado el tamaño de la fuente */
+}
+footer {
+    background-color: #d4dc37;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    margin-top: auto; /* Se asegura de que el footer esté pegado al fondo */
+    margin-bottom: 0;
+    border-radius: 30px;
+}
+.red-social {
+    color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+    font-size:100px;
+}
+.img-redes {
+    width: 55px;
+    height: 50px;
+    margin-left: 20px;
+}
+.contenedor-img {
+    display: inline-block;
+    margin: 0;
+}
+.subtitulos {
+    color: black;
+}
+.logotipo-img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+.texto1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

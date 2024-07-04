@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{% static 'css/stylesprincipal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesadmin.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/admin.js' %}"></script>
+</head>
+<body>
+    {% include 'head.html' %}
+    <div class="admin-container">
+        <h2>Panel de Administración</h2>
+        <div class="product-list">
+            <h3>Lista de Productos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    {% for product in products %}
+                        <tr>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.nombre }}</td>
+                            <td>{{ product.precio }}</td>
+                            <td>{{ product.descripcion }}</td>
+                            <td>
+                                <button class="edit-btn" data-id="{{ product.id }}">Editar</button>
+                                <button class="delete-btn" data-id="{{ product.id }}">Eliminar</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="product-form">
+            <h3>Agregar/Editar Producto</h3>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div>
+                    <label for="product-nombre">Nombre:</label>
+                    <input type="text" id="product-nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="product-descripcion">Descripción:</label>
+                    <textarea id="product-descripcion" name="descripcion" required></textarea>
+                </div>
+                <div>
+                    <label for="product-precio">Precio:</label>
+                    <input type="number" id="product-precio" name="precio" required>
+                </div>
+                <div>
+                    <label for="product-imagen">Imagen:</label>
+                    <input type="file" id="product-imagen" name="imagen">
+                </div>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
